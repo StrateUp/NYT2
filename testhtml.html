@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>nyt test</title>
+<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<div class="searchForm">
+		<p>Search News for Term:</p>
+		<input type="text" id="topic"></input>
+		<button class="btn btn-default" id="searchBtn">Search</button>
+	</div>
+<script type="text/javascript">
+	
+	// This variable will be pre-programmed with our authentication key (the one we received when we registered)
+var authKey = "b9f91d369ff59547cd47b931d8cbc56b:0:74623931";
+
+// These variables will hold the results we get from the user's inputs via HTML
+var queryTerm 	= "";
+var numResults 	= 0;
+var startYear 	= 0;
+var endYear		= 0;
+
+// Based on the queryTerm we will create a queryURL 
+var queryURLBase = "https://api.nytimes.com/svc/search/v2/articlesearch.json?api-key=" + authKey + "&q=";
+
+// Array to hold the various article info
+var articleCounter = 0;
+
+
+//functional logic
+//get the entered value and store it in the console
+$(".searchForm").on("click",function(event){
+	event.preventDefault();
+	$("#topic").val(queryTerm);
+	console.log(queryTerm);
+
+	 $.ajax({url: queryURLBase, method:"GET"})
+  .done(function(response){
+    console.log(response);
+});
+});
+</script>
+</body>
+</html>

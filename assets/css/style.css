@@ -1,0 +1,54 @@
+#mainheader {
+	text-align: center;
+	background-color: black
+	color: cornsilk;
+
+}
+
+input {
+	margin-bottom: 10px;
+}
+
+#searchparameters {
+	margin-bottom: 5px;
+	padding-bottom: 5px;
+	padding-top: 5px;
+	padding-left: 10px;
+	font-size: 25px;
+	background-color: royalblue;
+	color: cornsilk;
+
+}
+
+#toparticles {
+	background-color: royalblue;
+	color: cornsilk;
+	font-size: 25px;
+}
+
+#articlesPar {
+	margin-top: 20px;
+
+}
+
+.newarticles {
+	background-color: ghostwhite; 
+}
+
+.newH1 {
+	font-family: cursive;
+	font-size: 22px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+	background-color: lightgrey;
+}
+
+#searchBtn {
+	background-color: lightgrey; 
+}
+
+#current-employees{
+	background-color: grey;
+}
